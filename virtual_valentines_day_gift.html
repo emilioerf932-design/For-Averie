@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Valentine 💗</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .page {
+      display: none;
+      min-height: 100vh;
+      padding: 40px;
+      text-align: center;
+      color: #b0005c;
+      background-size: cover;
+      background-position: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .page.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      background: rgba(255,255,255,0.8);
+      padding: 15px 25px;
+      border-radius: 20px;
+    }
+
+    p {
+      max-width: 600px;
+      background: rgba(255,255,255,0.85);
+      padding: 20px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    .flowers {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .arrow {
+      font-size: 1.5rem;
+    }
+
+    .pictures {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
+      background: rgba(255, 182, 193, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: #a00050;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page active" id="page1" style="background-image: url('hello-kitty-1.jpg');">
+    <h1>Hello My Love 💕</h1>
+    <div class="flowers">🌸🌸🌸</div>
+    <p>
+      Happy Valentine’s Day to my beautiful wife.
+      This little website is filled with love, just like my heart is filled with you.
+    </p>
+
+    <div class="pictures">
+      <div class="pic">Photo 1</div>
+      <div class="pic">Photo 2</div>
+      <div class="pic">Photo 3</div>
+    </div>
+
+    <button class="btn" onclick="nextPage(2)">
+      Click Me <span class="arrow">➡️</span>
+    </button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page" id="page2" style="background-image: url('hello-kitty-2.jpg');">
+    <h1>You Are My Everything 💖</h1>
+    <div class="flowers">🌸🌷🌸</div>
+    <p>
+      “Many waters cannot quench love; rivers cannot sweep it away.”<br />
+      <strong>— Song of Solomon 8:7</strong>
+    </p>
+
+    <div class="pictures">
+      <div class="pic">Memory 1</div>
+      <div class="pic">Memory 2</div>
+      <div class="pic">Memory 3</div>
+    </div>
+
+    <button class="btn" onclick="nextPage(3)">
+      Click Me <span class="arrow">➡️</span>
+    </button>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="page" id="page3" style="background-image: url('hello-kitty-and-spiderman.jpg');">
+    <h1>Forever & Always 💗</h1>
+    <div class="flowers">🌸🌸🌷</div>
+    <p>
+      No matter where life takes us, I choose you every day.
+      Thank you for being my love, my best friend, and my forever Valentine.
+    </p>
+
+    <div class="pictures">
+      <div class="pic">Us 💞</div>
+      <div class="pic">Love 💕</div>
+      <div class="pic">Forever ♾️</div>
+    </div>
+
+    <p><strong>— Emilio</strong></p>
+  </div>
+
+  <script>
+    function nextPage(pageNumber) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page' + pageNumber).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
